@@ -1,0 +1,11 @@
+Ideas/TODOs to be done
+1. UI and APIs to create Teams/AuctionItems/Drafts/DraftItems
+2. Admin iew to create and manage a Draft_session via UI through APIs
+3. Setting up the Hub to allow for real-time updates to run the draft
+4. Implementing the logic for the draft process, including turn-taking and item selection
+5. OAuth integration for user authentication
+6. Implementing a notification system for users when it's their turn to draft
+7. Implementing a chat system for users to communicate during the draft
+8. I want to pause the draft session and resume it later... I think I can do it...
+9. Implementing a history log of draft actions for transparency
+

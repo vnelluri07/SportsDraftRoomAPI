@@ -1,14 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom", "SportsDraftRoom\SportsDraftRoom.csproj", "{349E28E8-F970-4827-84B2-E9BB0D18533D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.API", "SportsDraftRoom\SportsDraftRoom.API.csproj", "{349E28E8-F970-4827-84B2-E9BB0D18533D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6795B227-0B7E-4958-96FB-99404C4EBE9C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		TODO_Ideas.txt = TODO_Ideas.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.Data", "SportsDraftRoom.Data\SportsDraftRoom.Data.csproj", "{67AA84D7-4EC3-4B5C-B41B-625F66EF01F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.Repo", "SportsDraftRoom.Repo\SportsDraftRoom.Repo.csproj", "{B846B771-762B-48CA-94BF-D3F47931C9B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.Service", "SportsDraftRoom.Service\SportsDraftRoom.Service.csproj", "{2FFAE32A-CA76-4347-9E6C-98A4DB4E13BB}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "testingreactprojectclasslibraryfromvs", "TestingReactProjectClassLibraryFromVs\testingreactprojectclasslibraryfromvs.esproj", "{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,8 +29,29 @@ Global
 		{349E28E8-F970-4827-84B2-E9BB0D18533D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{349E28E8-F970-4827-84B2-E9BB0D18533D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{349E28E8-F970-4827-84B2-E9BB0D18533D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AA84D7-4EC3-4B5C-B41B-625F66EF01F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AA84D7-4EC3-4B5C-B41B-625F66EF01F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AA84D7-4EC3-4B5C-B41B-625F66EF01F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AA84D7-4EC3-4B5C-B41B-625F66EF01F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B846B771-762B-48CA-94BF-D3F47931C9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B846B771-762B-48CA-94BF-D3F47931C9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B846B771-762B-48CA-94BF-D3F47931C9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B846B771-762B-48CA-94BF-D3F47931C9B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FFAE32A-CA76-4347-9E6C-98A4DB4E13BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFAE32A-CA76-4347-9E6C-98A4DB4E13BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFAE32A-CA76-4347-9E6C-98A4DB4E13BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFAE32A-CA76-4347-9E6C-98A4DB4E13BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60719047-4721-4345-8F82-929EE3CB6722}
 	EndGlobalSection
 EndGlobal

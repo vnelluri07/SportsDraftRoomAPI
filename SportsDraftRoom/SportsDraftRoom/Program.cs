@@ -1,8 +1,20 @@
-using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
+using SportsDraftRoom.Data.Context;
+using SportsDraftRoom.Data.Context.Implementation;
 using SportsDraftRoom.Hubs;
+using SportsDraftRoom.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<ISdrConfigurationService, SdrConfigurationService>();
+builder.Services.AddDbContext<ISdrContext, SdrContext>((services, options) =>
+{
+    var cfgSvc = services.GetRequiredService<ISdrConfigurationService>();
+    var env = services.GetRequiredService<IHostEnvironment>();
+
+    options.UseSqlServer(cfgSvc.SdrConnection, builder => builder.EnableRetryOnFailure(
+        5, TimeSpan.FromSeconds(60), null));
+});
 // Add services to the container.
 
 builder.Services.AddControllers();

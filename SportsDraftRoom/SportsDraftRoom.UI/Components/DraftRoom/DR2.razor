@@ -1,0 +1,167 @@
+﻿@page "/draft2"
+@using SportsDraftRoom.Shared.Models
+@using Microsoft.AspNetCore.SignalR.Client
+
+@* <MudPaper>
+    @if (_showTempStuff)
+    {
+        <MudGrid>
+            <MudItem xs="12">
+                <MudTextField Label="User Name" @bind-value="_userName">
+                </MudTextField>
+            </MudItem>
+        </MudGrid>
+        <MudGrid>
+            <MudItem xs="12">
+                <MudTextField Label="Team Id" @bind-value="_teamId">
+                </MudTextField>
+            </MudItem>
+        </MudGrid>
+        <MudGrid>
+            <MudItem xs="12">
+            <MudButton OnClick="JoinDraft" Color="Color.Primary"
+                           Variant="Variant.Filled">Join Draft</MudButton>
+            </MudItem>
+        </MudGrid>
+    }
+    @if (_auctionItems.Any())
+    {
+        <MudGrid>
+            <MudItem xs="8">
+                <MudText> Connected as @_userName with Team # @_teamId </MudText>
+                <MudTable T="AuctionItemsDto"
+                          Dense="true"
+                          Striped="true"
+                          Items="_auctionItems">
+                    <HeaderContent>
+                        <MudTh>Id</MudTh>
+                        <MudTh>Name</MudTh>
+                        <MudTh>Bid Amount</MudTh>
+                        <MudTh></MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd>@context.Id</MudTd>
+                        <MudTd>@context.Name</MudTd>
+                        <MudTd>
+                            <MudTextField T="Int32"
+                                          Adornment="Adornment.Start"
+                                          AdornmentIcon="@Icons.Material.Filled.AttachMoney"
+                                          Variant="Variant.Outlined"></MudTextField>
+                        </MudTd>
+                        <MudTd>
+                            <MudButton Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       Disabled="isConnected">
+                                Bid
+                            </MudButton>
+                        </MudTd>
+                    </RowTemplate>
+                </MudTable>
+            </MudItem>
+            <MudItem xs="4">
+                <MudItem> Message</MudItem>
+                <MudTextField T="string"
+                              Variant="Variant.Outlined"
+                              @bind-Value="_message"></MudTextField>
+                <MudButton @bind-Value="_message"
+                           Disabled="isConnected"
+                           Variant="Variant.Outlined"
+                           OnClick="() => SendMessage(_message)"
+                           Color="Color.Primary">Send</MudButton>
+            </MudItem>
+        </MudGrid>
+    }
+</MudPaper> *@
+
+@code
+{
+    /*
+    private HubConnection? _hubConnection;
+    private List<TeamsDto> _teams = new();
+    private List<AuctionItemsDto> _auctionItems = new List<AuctionItemsDto>
+    {
+        new AuctionItemsDto
+        {
+            Id = 22,
+            Name = "AU1"
+        },
+        new AuctionItemsDto
+        {
+            Id = 24,
+            Name = "AU2"
+        }
+    };
+    private string _message = string.Empty;
+    private List<string> messages = ["test1", "test2"];
+    [Inject] private NavigationManager _navigationManager { get; set; }
+    private string? _userName;
+    private int _teamId;
+
+    //Temporary stuff for testing purposes
+    private bool _showTempStuff = true;
+    private string _uri = "https://localhost:7156/chathub";
+
+    protected override async Task OnInitializedAsync()
+    {
+        //TODO: this will come back here after SSO/OAuth2 is implemented to tead the user name and team ID
+        _hubConnection = new HubConnectionBuilder()
+            .WithUrl(_navigationManager.ToAbsoluteUri(_uri))
+            .WithAutomaticReconnect()
+            .Build();
+
+        _hubConnection.On<List<TeamsDto>, List<AuctionItemsDto>>("DraftRoomInitialized", (teams, auctionItems) =>
+        {
+            _teams = teams;
+            _auctionItems = auctionItems;
+            StateHasChanged();
+        });
+
+        _hubConnection.On<int, int>("AuctionItemPicked", (teamId, auctionId) =>
+        {
+            var team = _teams.FirstOrDefault(t => t.Id == teamId);
+            var auctionItem = _auctionItems.FirstOrDefault(ai => ai.Id == auctionId);
+            if (team != null && auctionItem != null)
+            {
+                _auctionItems.Remove(auctionItem);
+                StateHasChanged();
+            }
+        });
+
+        _hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            messages.Add($"{user}: {message}");
+            StateHasChanged();
+        });
+
+        await _hubConnection.StartAsync();
+    }
+
+    private bool isConnected => _hubConnection?.State == HubConnectionState.Connected;
+
+    private async Task JoinDraft()
+    {
+        if (_hubConnection is not null)
+        {
+            try
+            {
+                await _hubConnection.InvokeAsync("InitializeDraftRoomAsync", _teamId.ToString(), _userName);
+                _showTempStuff = false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ JoinDraft error: {ex.Message}");
+            }
+        }
+    }
+
+
+    private async Task SendMessage(string message)
+    {
+        if (!string.IsNullOrWhiteSpace(message) && _hubConnection is not null)
+        {
+            await _hubConnection.SendAsync("SendMessage", _userName, message);
+            messages.Add($"{_userName}: {message}");
+        }
+        _message = string.Empty;
+    }*/
+}

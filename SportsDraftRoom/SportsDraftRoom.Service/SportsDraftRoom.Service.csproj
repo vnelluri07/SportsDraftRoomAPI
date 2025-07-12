@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SportsDraftRoom.Repo\SportsDraftRoom.Repo.csproj" />
+    <ProjectReference Include="..\SportsDraftRoom.Shared\SportsDraftRoom.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

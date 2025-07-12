@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using SportsDraftRoom.Data.Context;
-using SportsDraftRoom.Data.Context.Implementation;
 using SportsDraftRoom.Hubs;
 using SportsDraftRoom.Internal;
+using SportsDraftRoom.Repo;
+using SportsDraftRoom.Repo.Implementation;
+using SportsDraftRoom.Service;
+using SportsDraftRoom.Service.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +36,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
 
+builder.Services.AddScoped<IDraftRepo, DraftRepo>();
+builder.Services.AddScoped<IDraftService, DraftService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,7 +48,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapHub<ChatHub>("/chathub");
+app.MapHub<SdrHub>("/sdrhub");
+app.MapHub<SdrHub2>("/sdr2hub");
 
 app.UseHttpsRedirection();
 app.UseCors();

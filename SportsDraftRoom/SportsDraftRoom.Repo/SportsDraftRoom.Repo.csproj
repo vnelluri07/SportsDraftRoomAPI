@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SportsDraftRoom.Data\SportsDraftRoom.Data.csproj" />
+    <ProjectReference Include="..\SportsDraftRoom.Shared\SportsDraftRoom.Shared.csproj" />
   </ItemGroup>
 
 </Project>

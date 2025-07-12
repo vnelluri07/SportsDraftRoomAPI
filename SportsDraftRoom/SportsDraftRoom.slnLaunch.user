@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "SportsDraftRoom\\SportsDraftRoom.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "SportsDraftRoom.UI\\SportsDraftRoom.UI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

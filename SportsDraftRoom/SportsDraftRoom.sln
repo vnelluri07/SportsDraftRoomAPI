@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.Service", "
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "testingreactprojectclasslibraryfromvs", "TestingReactProjectClassLibraryFromVs\testingreactprojectclasslibraryfromvs.esproj", "{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.Shared", "SportsDraftRoom.Shared\SportsDraftRoom.Shared.csproj", "{8237B948-78E7-4FE5-AB4B-5712B6382AA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsDraftRoom.UI", "SportsDraftRoom.UI\SportsDraftRoom.UI.csproj", "{2CDB65C8-9749-4C58-99EB-C35BACE1A90C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,14 @@ Global
 		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FA8947C-1864-EABF-42CB-8D2278EEA2F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8237B948-78E7-4FE5-AB4B-5712B6382AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8237B948-78E7-4FE5-AB4B-5712B6382AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8237B948-78E7-4FE5-AB4B-5712B6382AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8237B948-78E7-4FE5-AB4B-5712B6382AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDB65C8-9749-4C58-99EB-C35BACE1A90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDB65C8-9749-4C58-99EB-C35BACE1A90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDB65C8-9749-4C58-99EB-C35BACE1A90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDB65C8-9749-4C58-99EB-C35BACE1A90C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
